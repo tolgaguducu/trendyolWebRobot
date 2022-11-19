@@ -1,0 +1,5 @@
+robotframework==4.1.2
+robotframework-seleniumlibrary==6.0.0
+robotframework-debuglibrary==2.2.2
+webdriver-manager==3.8.3
+robotframework-pabot==2.6.0
