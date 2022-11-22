@@ -19,6 +19,14 @@ Element Visible And Click
     click element  ${locatorElement}
 
 
+Element Visible And Attribute Should Be
+    [Arguments]  ${locatorElement}  ${attribute}  ${value}
+    Wait Until Element Is Visible With Timeout  ${locatorElement}
+    element attribute value should be  ${locatorElement}  ${attribute}  ${value}
+
+
+
+
 If Element Visible And Click
     [Arguments]  ${locatorElement}
     sleep  5
