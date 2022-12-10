@@ -17,6 +17,7 @@ Element Visible And Click
     [Arguments]  ${locatorElement}
     Wait Until Element Is Visible With Timeout  ${locatorElement}
     click element  ${locatorElement}
+    log to console  ${locatorElement} clicked
 
 
 Element Visible And Attribute Should Be
@@ -25,13 +26,12 @@ Element Visible And Attribute Should Be
     element attribute value should be  ${locatorElement}  ${attribute}  ${value}
 
 
-
-
 If Element Visible And Click
     [Arguments]  ${locatorElement}
     sleep  5
     ${count}=  get element count  ${locatorElement}
     run keyword if   ${count} > 0  click element  ${locatorElement}
+    run keyword if  ${count}>0  log to console  ${locatorElement} visible and clicked
 
 
 If Element Visible And Input Text
@@ -59,6 +59,7 @@ Element Visible And Input Text
     [Arguments]  ${locatorElement}  ${inputText}
     Wait Until Element Is Visible With Timeout  ${locatorElement}
     input text  ${locatorElement}  ${inputText}
+    log to console  text written
 
 
 Click Element And Check Url
